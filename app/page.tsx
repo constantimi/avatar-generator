@@ -25,8 +25,8 @@ const Home = () => {
                             x2='1'
                             y2='1'
                         >
-                            <stop offset='0%' stop-color='#3d5ff5' />
-                            <stop offset='100%' stop-color='#f53d5f' />
+                            <stop offset='0%' stopColor='#3d5ff5' />
+                            <stop offset='100%' stopColor='#f53d5f' />
                         </linearGradient>
                     </defs>
                     <rect
