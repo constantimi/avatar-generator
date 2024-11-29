@@ -2,6 +2,8 @@
 
 A simple **Next.js** API to generate SVG avatars with gradient backgrounds and customizable text. The API supports various query parameters for personalization, making it easy to use in any project.
 
+<img width="668" alt="avatar" src="https://github.com/user-attachments/assets/53d171bb-26dc-4876-87fc-b61776f8fbae">
+
 ## **Features**
 
 -   Dynamically generated SVG avatars with gradients.
