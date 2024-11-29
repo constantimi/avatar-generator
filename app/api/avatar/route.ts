@@ -19,8 +19,8 @@ export async function GET(req: Request) {
         <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="${gradient.fromColor}" />
-                    <stop offset="100%" stopColor="${gradient.toColor}" />
+                    <stop offset="0%" stop-color="${gradient.fromColor}" />
+                    <stop offset="100%" stop-color="${gradient.toColor}" />
                 </linearGradient>
             </defs>
             <rect width="${size}" height="${size}" rx="${rounded}" ry="${rounded}" fill="url(#gradient)" />
