@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Avatar Generator API**
 
-## Getting Started
+A simple **Next.js** API to generate SVG avatars with gradient backgrounds and customizable text. The API supports various query parameters for personalization, making it easy to use in any project.
 
-First, run the development server:
+## **Features**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   Dynamically generated SVG avatars with gradients.
+-   Customizable avatar size, text, and corner rounding.
+-   Powered by Next.js with support for **Edge API Routes**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Quick Starter**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Installation**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository:**
 
-## Learn More
+    ```bash
+    git clone https://github.com/constantimi/avatar-generator.git
+    cd avatar-generator
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Start the development server:**
 
-## Deploy on Vercel
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    The API will be available at `http://localhost:3000/api/avatar`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## **Usage**
+
+### **Endpoint:**
+
+`GET /api/avatar`
+
+### **Query Parameters:**
+
+| Parameter | Type   | Description                                       | Default |
+| --------- | ------ | ------------------------------------------------- | ------- |
+| `name`    | string | Name used for generating the gradient background. | Random  |
+| `text`    | string | Text displayed in the center of the avatar.       | (none)  |
+| `size`    | number | Size of the avatar in pixels.                     | `120`   |
+| `rounded` | number | Corner radius for rounding the avatar in pixels.  | `0`     |
+
+### **Examples**
+
+1. **Simple Avatar:**
+
+    ```bash
+    http://localhost:3000/api/avatar?name=Ex
+    ```
+
+2. **Avatar with Custom Text:**
+
+    ```bash
+    http://localhost:3000/api/avatar?name=example&text=Ex
+    ```
+
+3. **Custom Size and Rounded Corners:**
+    ```bash
+    http://localhost:3000/api/avatar?name=example&text=Ex&size=300&rounded=20
+    ```
+
+## **Contributing**
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
