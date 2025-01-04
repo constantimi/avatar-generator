@@ -11,8 +11,23 @@ export async function GET(req: Request) {
             ? size / 2
             : Number(url.searchParams.get('rounded') || 0);
 
-    // Generate gradient based on username
-    const gradient = await generateGradient(name);
+    // Retrieve color parameters and decode them
+    let fromColor = url.searchParams.get('from');
+    let toColor = url.searchParams.get('to');
+
+    if (fromColor) {
+        fromColor = decodeURIComponent(fromColor); // Decode URL-encoded color
+    }
+
+    if (toColor) {
+        toColor = decodeURIComponent(toColor); // Decode URL-encoded color
+    }
+
+    // If no custom colors are passed, generate gradient based on the username
+    const gradient =
+        fromColor && toColor
+            ? { fromColor, toColor }
+            : await generateGradient(name);
 
     // Create the avatar SVG element
     const svg = `
