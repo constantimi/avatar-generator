@@ -73,4 +73,5 @@ A simple **Next.js** API to generate SVG avatars with gradient backgrounds and c
     http://localhost:3000/api/avatar?name=example&text=Ex&size=300&rounded=20
     ```
     
-    <img width="302" alt="rounded" src="https://github.com/user-attachments/assets/e6b6d34b-808f-4dc7-b38e-92a7e426f5ce">
+<img width="300" alt="text" src="https://github.com/user-attachments/assets/8c5df754-a826-4904-87a6-058e41a1bcaa">
+
